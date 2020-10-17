@@ -1,0 +1,46 @@
+<!-- This is a comment. It doesn't actually do anything. -->
+<!-- Don't forget to press the Run button. -->
+
+<!DOCTYPE html>
+
+<form id="form">
+  <label>
+    What grade did you get 1st quarter? (%)
+    <!-- Input box of type number -->
+    <input id="quarter1Input" type="number" />
+  </label>
+
+  <label>
+    What grade did you get 2nd quarter? (%)
+    <input id="quarter2Input" type="number" />
+  </label>
+
+  <label>
+    What grade did you get on the exam? (%)
+    <input id="examGradeInput" type="number" />
+  </label>
+
+  <!-- When you press this button, it causes a "submit" event on the form element. -->
+  <button>Calculate</button>
+</form>
+
+<!-- This is where we're going to put the answer. -->
+<p id="resultParagraph"></p>
+
+<!-- Everything above here was just describing the page layout with HTML. -->
+<!-- The <script> tag is where we actually DO stuff with JavaScript. -->
+<script>
+  // When the form is submitted, do all the stuff in the curly braces
+  form.addEventListener("submit", (e) => {
+    // Stop the page from reloading
+    e.preventDefault();
+    // Grab the input fields and convert them from text to decimal numbers (floats)
+    let quarter1Grade = parseFloat(quarter1Input.value);
+    let quarter2Grade = parseFloat(quarter2Input.value);
+    let myExamGrade = parseFloat(examGradeInput.value);
+    // Calculate your semester grade
+    let res = 0.4 * quarter1Grade + 0.4 * quarter2Grade + 0.2 * myExamGrade;
+    // Put the semester grade into the resultParagraph
+    resultParagraph.innerText = res;
+  });
+</script>
