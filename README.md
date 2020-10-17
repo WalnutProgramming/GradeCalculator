@@ -1,6 +1,6 @@
 # GradeCalculator
 
-The code is in `index.html`.
+The code is in `index.html`. Whenever the `main` branch gets updated, the site is deployed at <https://focused-kowalevski-932dc5.netlify.app/>.
 
 Things to try:
 
