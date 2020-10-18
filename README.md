@@ -17,7 +17,7 @@ Things to try:
       type="text/javascript"
     ></script>
     ```
-- In our JavaScript code, we referred to `quarter1`, `quarter2`, `examGrade`, and `form` directly.
+- In our JavaScript code, we referred to `quarter1Input`, `quarter2Input`, `examGradeInput`, and `form` directly.
   This works, but it's considered a bad idea because it's hard to keep track of where your variables are coming from.
   Google `document.getElementById` and use that to get access to our HTML elements instead of referring to them directly.
 
